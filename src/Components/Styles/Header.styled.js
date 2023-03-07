@@ -25,4 +25,18 @@ export const StyledHeader = styled.header`
     display: flex;
     gap: 2.2rem;
   }
+
+  .nav-link {
+    a {
+      svg {
+        height: 2.4rem;
+      }
+
+      :hover {
+        svg {
+          color: var(--green);
+        }
+      }
+    }
+  }
 `;
