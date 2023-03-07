@@ -9,6 +9,22 @@ export const StyledImageResultCard = styled.article`
   grid-template-rows: 1fr;
   padding: 2.2rem;
 
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+  @media screen and (max-width: 1080px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.5fr 1fr 1.5fr;
+  }
+
+  @media screen and (max-width: 650px) {
+    grid-template-rows: 1.5fr 1fr 3fr;
+  }
+
+  @media screen and (max-width: 400px) {
+    grid-template-rows: 1.5fr 1fr 2.5fr;
+  }
+
   .text {
     span {
       color: var(--green);
@@ -35,6 +51,12 @@ export const StyledImageResultCard = styled.article`
     flex-direction: column;
     justify-content: space-around;
 
+    @media screen and (max-width: 1080px) {
+      align-items: center;
+      gap: 2.2rem;
+      text-align: center;
+    }
+
     .image-name {
       font-size: 2.6rem;
       color: var(--green);
@@ -43,7 +65,12 @@ export const StyledImageResultCard = styled.article`
     .compression-percentage {
       display: flex;
       align-items: center;
+
       gap: 1.2rem;
+
+      @media screen and (max-width: 1080px) {
+        justify-content: center;
+      }
 
       svg {
         height: 1.8rem;
@@ -64,6 +91,10 @@ export const StyledImageResultCard = styled.article`
 
   .optimization-results-title {
     font-size: var(--text-md);
+
+    @media screen and (max-width: 1080px) {
+      text-align: center;
+    }
   }
   .optimization-results-card {
     background-color: var(--black);
@@ -72,6 +103,10 @@ export const StyledImageResultCard = styled.article`
     display: flex;
     padding: 2.2rem;
     gap: 2.2rem;
+
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+    }
   }
 
   .png-placeholder {
@@ -81,6 +116,15 @@ export const StyledImageResultCard = styled.article`
     align-items: center;
     justify-content: center;
     position: relative;
+
+    @media screen and (max-width: 1080px) {
+      flex: 1;
+    }
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+      flex: 1;
+    }
   }
 
   .optimization-results-text {
@@ -88,6 +132,16 @@ export const StyledImageResultCard = styled.article`
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 1;
+
+    @media screen and (max-width: 1080px) {
+      flex-grow: 0;
+      flex: 1;
+    }
+
+    @media screen and (max-width: 650px) {
+      width: 100%;
+      text-align: center;
+    }
   }
 
   .download-image {

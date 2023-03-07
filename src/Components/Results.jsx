@@ -223,24 +223,26 @@ const Results = ({ images, url }) => {
           </header>
 
           <div className="image-card-grid-container">
-            {images.map((image, index) => (
-              <ImageResultCard
-                key={index}
-                imageURL={image.imageURL}
-                imageName={image.imageName}
-                imageFormat={image.imageFormat}
-                originalFileSize={image.originalFileSize}
-                originalFileSizeFormated={image.originalFileSizeFormated}
-                optimizedFileSize={image.optimizedFileSize}
-                optimizedFileSizeFormated={image.optimizedFileSizeFormated}
-                optimizedImage={image.optimizedImage}
-                percentageReduction={image.percentageReduction}
-                width={image.width}
-                height={image.height}
-                naturalWidth={image.naturalWidth}
-                naturalHeight={image.naturalHeight}
-              />
-            ))}
+            {images
+              .filter((image) => image.percentageReduction > 20)
+              .map((image, index) => (
+                <ImageResultCard
+                  key={index}
+                  imageURL={image.imageURL}
+                  imageName={image.imageName}
+                  imageFormat={image.imageFormat}
+                  originalFileSize={image.originalFileSize}
+                  originalFileSizeFormated={image.originalFileSizeFormated}
+                  optimizedFileSize={image.optimizedFileSize}
+                  optimizedFileSizeFormated={image.optimizedFileSizeFormated}
+                  optimizedImage={image.optimizedImage}
+                  percentageReduction={image.percentageReduction}
+                  width={image.width}
+                  height={image.height}
+                  naturalWidth={image.naturalWidth}
+                  naturalHeight={image.naturalHeight}
+                />
+              ))}
           </div>
         </StyledResults>
       ) : (
