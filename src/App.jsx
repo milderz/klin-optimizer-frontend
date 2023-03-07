@@ -21,7 +21,7 @@ function App() {
   const [error, setError] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
   const [modalActive, setModalActive] = useState(false);
-  const [isValidURL, setIsValidURL] = useState(false);
+  const [isValidURL, setIsValidURL] = useState(true);
 
   const navigate = useNavigate();
 
