@@ -40,7 +40,10 @@ export const StyledImageResultCard = styled.article`
     background-size: cover;
 
     img {
-      max-width: 100%;
+      max-width: 80%;
+      background-size: cover;
+      background-position: center;
+      object-fit: contain;
     }
   }
 
@@ -116,6 +119,13 @@ export const StyledImageResultCard = styled.article`
     align-items: center;
     justify-content: center;
     position: relative;
+
+    img {
+      max-width: 80%;
+      background-size: cover;
+      background-position: center;
+      object-fit: contain;
+    }
 
     @media screen and (max-width: 1080px) {
       flex: 1;
